@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="eMessage" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonStart" destination="Xz7-Yb-mgk" id="wqp-eV-eVZ"/>
+                <outlet property="textFieldName" destination="pOB-51-C7q" id="ZAN-hK-DQx"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ra9-Sw-Hp6"/>
+                <outlet property="viewContainer" destination="iGO-dQ-v8h" id="V0D-V5-oPL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eMessage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29n-Sd-w2X">
+                    <rect key="frame" x="137.5" y="108" width="139.5" height="35"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz7-Yb-mgk">
+                    <rect key="frame" x="137" y="500.5" width="140" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Start">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onStart:" destination="-1" eventType="touchUpInside" id="s78-bh-fN5"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGO-dQ-v8h">
+                    <rect key="frame" x="67" y="375.5" width="280" height="95"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a display name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-C3-rpd">
+                            <rect key="frame" x="10" y="10" width="177" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOB-51-C7q">
+                            <rect key="frame" x="10" y="41" width="260" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="SvK-CH-b2k"/>
+                            </constraints>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pOB-51-C7q" secondAttribute="bottom" constant="10" id="1aX-zC-jJS"/>
+                        <constraint firstItem="Pzu-C3-rpd" firstAttribute="top" secondItem="iGO-dQ-v8h" secondAttribute="top" constant="10" id="FcJ-Z4-ebM"/>
+                        <constraint firstItem="Pzu-C3-rpd" firstAttribute="leading" secondItem="iGO-dQ-v8h" secondAttribute="leading" constant="10" id="NRV-bg-dqz"/>
+                        <constraint firstItem="pOB-51-C7q" firstAttribute="leading" secondItem="Pzu-C3-rpd" secondAttribute="leading" id="PMj-7l-xoa"/>
+                        <constraint firstItem="pOB-51-C7q" firstAttribute="top" secondItem="Pzu-C3-rpd" secondAttribute="bottom" constant="10" id="UZq-fn-uNC"/>
+                        <constraint firstItem="pOB-51-C7q" firstAttribute="centerX" secondItem="iGO-dQ-v8h" secondAttribute="centerX" id="Xgh-J4-Pdg"/>
+                        <constraint firstAttribute="width" constant="280" id="gfE-hq-cJH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="29n-Sd-w2X" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="6ys-9W-aYt"/>
+                <constraint firstItem="Xz7-Yb-mgk" firstAttribute="width" secondItem="iGO-dQ-v8h" secondAttribute="width" multiplier="0.5" id="BlK-0E-cpB"/>
+                <constraint firstItem="29n-Sd-w2X" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="FeA-jl-Mwn"/>
+                <constraint firstItem="iGO-dQ-v8h" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-30" id="bcc-wY-c9P"/>
+                <constraint firstItem="iGO-dQ-v8h" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fQA-Vp-wGM"/>
+                <constraint firstItem="Xz7-Yb-mgk" firstAttribute="centerX" secondItem="iGO-dQ-v8h" secondAttribute="centerX" id="gxE-K1-Cxt"/>
+                <constraint firstItem="Xz7-Yb-mgk" firstAttribute="top" secondItem="iGO-dQ-v8h" secondAttribute="bottom" constant="30" id="qm8-Oi-2AR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
