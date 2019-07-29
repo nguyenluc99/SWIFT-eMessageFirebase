@@ -20,6 +20,8 @@
 		407518BF22E605E900D0F266 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407518BB22E605E900D0F266 /* ListViewController.xib */; };
 		407518C022E605E900D0F266 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407518BC22E605E900D0F266 /* LoginViewController.xib */; };
 		407518C222E6064B00D0F266 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407518C122E6064B00D0F266 /* AppSettings.swift */; };
+		640A63A322EF1AFB00463305 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640A63A222EF1AFB00463305 /* Message.swift */; };
+		64D2511022EDD58D00E1B7A4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2510F22EDD58D00E1B7A4 /* MessageViewController.swift */; };
 		FB4C37D597E635C80A74469E /* Pods_eMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92404C02A79A6EF1EF801C1B /* Pods_eMessage.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		407518BC22E605E900D0F266 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		407518C122E6064B00D0F266 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		46DAE1DAD2C0A371FE1CA950 /* Pods-eMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMessage.debug.xcconfig"; path = "Target Support Files/Pods-eMessage/Pods-eMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		640A63A222EF1AFB00463305 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		64D2510F22EDD58D00E1B7A4 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		92404C02A79A6EF1EF801C1B /* Pods_eMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83F06B7521746417F5817C0 /* Pods-eMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMessage.release.xcconfig"; path = "Target Support Files/Pods-eMessage/Pods-eMessage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,7 @@
 		407518AB22E604F900D0F266 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				64D2510F22EDD58D00E1B7A4 /* MessageViewController.swift */,
 				407518BA22E605E900D0F266 /* ListViewController.swift */,
 				407518BB22E605E900D0F266 /* ListViewController.xib */,
 				407518B922E605E900D0F266 /* LoginViewController.swift */,
@@ -122,6 +127,7 @@
 			children = (
 				407518B622E605DF00D0F266 /* DatabaseRepresentation.swift */,
 				407518B522E605DF00D0F266 /* User.swift */,
+				640A63A222EF1AFB00463305 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,11 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				407518BD22E605E900D0F266 /* LoginViewController.swift in Sources */,
+				64D2511022EDD58D00E1B7A4 /* MessageViewController.swift in Sources */,
 				407518B722E605DF00D0F266 /* User.swift in Sources */,
 				407518B322E605D600D0F266 /* UIView+Additions.swift in Sources */,
 				4075189922E6044A00D0F266 /* AppDelegate.swift in Sources */,
 				407518B822E605DF00D0F266 /* DatabaseRepresentation.swift in Sources */,
 				407518B422E605D600D0F266 /* UIColor+Additions.swift in Sources */,
+				640A63A322EF1AFB00463305 /* Message.swift in Sources */,
 				407518C222E6064B00D0F266 /* AppSettings.swift in Sources */,
 				407518BE22E605E900D0F266 /* ListViewController.swift in Sources */,
 			);

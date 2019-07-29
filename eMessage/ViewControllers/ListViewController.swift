@@ -18,7 +18,7 @@ class ListViewController: UIViewController {
     
     var userRef: DatabaseReference!
     var ref: DatabaseReference!
-    var users = [User]()
+    var users = [UserModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,39 +26,57 @@ class ListViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
-        self.navigationItem.title = "Users"
+        self.navigationItem.title = AppSettings.username
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(onLogout))
-        
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         
+        self.ref = Database.database().reference().child("users")
+        ref.observe(.childAdded) { (snapshot) in
+            if let user = UserModel.init(snapshot: snapshot) {
+                if AppSettings.uid != user.uid {
+                    self.users.append(user)
+                    self.tableView.reloadData()
+                }
+            }
+        }
         loadData()
     }
     
     func loadData() {
-
     }
     
     @objc func onLogout() {
-
+        do {
+            try Auth.auth().signOut()
+            AppSettings.uid = nil
+            let vc = UINavigationController(rootViewController: LoginViewController())
+            self.present(vc, animated: true, completion: nil)
+        }
+        catch {
+            print(error)
+        }
     }
 
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = "Hello"
+        cell.textLabel?.text = users[indexPath.row].username
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Tapped item \(indexPath.row)")
+        let vc = MessageViewController(with: users[indexPath.row])
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

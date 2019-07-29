@@ -56,7 +56,6 @@ class LoginViewController: UIViewController {
                 }
                 if let user = Auth.auth().currentUser {
                     self.saveUser(user: user)
-                
                     let vc = UINavigationController(rootViewController: ListViewController())
                     self.present(vc, animated: true, completion: nil)
                 
